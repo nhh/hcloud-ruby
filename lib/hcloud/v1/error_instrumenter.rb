@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'http'
+require 'hcloud/v1/api_error'
 
 module Hcloud
   module V1

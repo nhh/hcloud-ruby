@@ -4,12 +4,12 @@ require 'json'
 require 'byebug'
 
 require 'hcloud/client'
-require 'hcloud/v1/api_error'
+require 'hcloud/v1/action'
 
 module Hcloud
   module V1
     module ActionReaderMethods
-      def all(status, sort)
+      def all(status = '', sort = '')
         response = Hcloud::Client.http
                                  .get("https://api.hetzner.cloud/v1/actions?status=#{status}&sort=#{sort}")
 
